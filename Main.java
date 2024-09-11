@@ -1,7 +1,4 @@
-import problems.DataTypes;
-import problems.Date;
-import problems.InputOutput;
-import problems.Text;
+import problems.*;
 
 import java.util.Scanner;
 
@@ -34,5 +31,10 @@ public class Main {
         //Text text = new Text();
         //text.currencyFormatter();
 
+        //*********************************************************************************
+        //  STRING:
+        StringFunctions stringFunctions = new StringFunctions();
+        //stringFunctions.findSubString();
+        System.out.println(stringFunctions.getSmallestAndLargest("welcometojava", 3));
     }
 }
