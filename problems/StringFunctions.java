@@ -48,6 +48,29 @@ public class StringFunctions {
         return smallest + "\n" + largest;
     }
 
+    public void isPalindrome(){
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
 
+        boolean isPalindrome = true;
+
+        char[] chars = new char[A.length()];
+
+        for(int i = 0; i < A.length(); i++){
+            chars[i] = A.charAt(i);
+        }
+
+
+        for(int i = 0; i < chars.length; i++){
+            if(chars[i] != chars[chars.length - i -1]){
+                isPalindrome = false;
+            }
+        }
+        if(isPalindrome){
+            System.out.println("Yes");
+        }else {
+            System.out.println("No");
+        }
+    }
 
 }

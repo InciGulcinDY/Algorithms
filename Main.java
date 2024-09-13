@@ -35,6 +35,7 @@ public class Main {
         //  STRING:
         StringFunctions stringFunctions = new StringFunctions();
         //stringFunctions.findSubString();
-        System.out.println(stringFunctions.getSmallestAndLargest("welcometojava", 3));
+        //System.out.println(stringFunctions.getSmallestAndLargest("welcometojava", 3));
+        stringFunctions.isPalindrome();
     }
 }
