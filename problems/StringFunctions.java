@@ -73,4 +73,39 @@ public class StringFunctions {
         }
     }
 
+    public boolean isAnagram(String a, String b){
+
+        // Convert both strings to uppercase to make the comparison case-insensitive
+        a = a.toUpperCase();
+        b = b.toUpperCase();
+
+        // Anagrams must have the same length
+        if (a.length() != b.length()) {
+            return false;
+        }
+
+        // Create a frequency array for counting characters (26 letters for A-Z)
+        int[] charCounts = new int[26];
+
+        // Count the frequency of each character in string 'a'
+        for (int i = 0; i < a.length(); i++) {
+            charCounts[a.charAt(i) - 'A']++;
+        }
+
+        // Subtract the frequency based on characters in string 'b'
+        for (int i = 0; i < b.length(); i++) {
+            charCounts[b.charAt(i) - 'A']--;
+        }
+
+        // Check if all values in the array are zero, meaning frequencies match
+        for (int count : charCounts) {
+            if (count != 0) {
+                return false;  // If any count is not zero, they are not anagrams
+            }
+        }
+
+        return true;  // All counts are zero, so they are anagrams
+
+    }
+
 }

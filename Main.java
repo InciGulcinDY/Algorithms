@@ -36,6 +36,12 @@ public class Main {
         StringFunctions stringFunctions = new StringFunctions();
         //stringFunctions.findSubString();
         //System.out.println(stringFunctions.getSmallestAndLargest("welcometojava", 3));
-        stringFunctions.isPalindrome();
+        //stringFunctions.isPalindrome();
+
+        /*System.out.println ("Enter the words which to be compared as being anagram of each other: ");
+        String a = scan.nextLine();
+        String b = scan.nextLine();
+        System.out.println(stringFunctions.isAnagram(a, b));*/
+
     }
 }
